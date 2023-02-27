@@ -1,4 +1,12 @@
 .header{
+    position: relative;
+    position: fixed;
+    width: 100%;
+    &__wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
     .branding{
         display: flex;
         align-items: center;
@@ -14,4 +22,117 @@
             }
         }
     }
+
+    &__nav{
+        position: absolute;
+        background: $clr-dark;
+        top: 8rem;
+        right: -100rem;
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        text-decoration: none;
+        font-size: 2rem;
+        transition: .5s ease;
+        ul{
+            list-style: none;
+         
+            li{
+                padding: 2rem 0;
+                border-bottom: 1px solid $clr-light;
+                a{
+                    color: $clr-light;
+                }
+                &:hover{
+                    background: $clr-light;
+                }
+                a{
+                    color: $clr-primary;
+                }
+            }
+
+        }
+        &.open{
+            right: 0;
+            transition: .5s ease;
+           
+        }
+    }
+    // @include mediaQuery($break-lg){
+    //     .toggle__menu{
+    //         display: none;
+    //     }
+    //     &__nav{
+    //         position: unset;
+    //         width: unset;
+    //         height: unset;
+    //     }
+    // }
+    
+
+// }
+
+.toggle__menu{
+
+    span{
+        width: 3.5rem;
+        height: .3rem;
+        background: $clr-primary;
+        display: block;
+        margin-bottom: .5rem;
+        border-radius: 5rem;
+        transition: .5 ease;
+
+    }
+
+    &.open{
+        span:first-child{
+            transform: translate(0, 10px)rotate(225deg);
+            transition: .5s ease;
+        }
+        span:nth-child(2){
+            opacity: 0;
+        }
+        span:last-child{
+            transform: translate(0, -6px)rotate(-225deg);
+            transition: .5s ease;
+        }
+    }
+
+    
+
 }
+
+@include mediaQuery($break-lg){
+    .toggle__menu{
+        display: none;
+    }
+    &__nav{
+        position: unset;
+        width: unset;
+        height: unset;
+        background: none;
+        ul{
+            display: flex;
+            li{
+                margin-left: 2rem;
+                border-bottom: none;
+                a{
+                    color: $clr-light;
+                }
+                &:hover{
+                background: none;
+                    a{
+                        color: $clr-primary;
+                    }
+                    }
+                }
+            }
+
+        }
+    }
+
+}
+
+
+

@@ -1,3 +1,4 @@
+/**********BREAKPOINTS**********/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,6 +7,10 @@
 
 ul {
   list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 html {
@@ -232,6 +237,16 @@ body {
   margin-left: 20rem;
 }
 
+.header {
+  position: relative;
+  position: fixed;
+  width: 100%;
+}
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .header .branding {
   display: flex;
   align-items: center;
@@ -246,4 +261,206 @@ body {
 }
 .header .branding h3 span {
   color: #ffa700;
+}
+.header__nav {
+  position: absolute;
+  background: #2b2b2b;
+  top: 8rem;
+  right: -100rem;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  text-decoration: none;
+  font-size: 2rem;
+  transition: 0.5s ease;
+}
+.header__nav ul {
+  list-style: none;
+}
+.header__nav ul li {
+  padding: 2rem 0;
+  border-bottom: 1px solid #ffffff;
+}
+.header__nav ul li a {
+  color: #ffffff;
+}
+.header__nav ul li:hover {
+  background: #ffffff;
+}
+.header__nav ul li a {
+  color: #ffa700;
+}
+.header__nav.open {
+  right: 0;
+  transition: 0.5s ease;
+}
+.header .toggle__menu span {
+  width: 3.5rem;
+  height: 0.3rem;
+  background: #ffa700;
+  display: block;
+  margin-bottom: 0.5rem;
+  border-radius: 5rem;
+  transition: 0.5 ease;
+}
+.header .toggle__menu.open span:first-child {
+  transform: translate(0, 10px) rotate(225deg);
+  transition: 0.5s ease;
+}
+.header .toggle__menu.open span:nth-child(2) {
+  opacity: 0;
+}
+.header .toggle__menu.open span:last-child {
+  transform: translate(0, -6px) rotate(-225deg);
+  transition: 0.5s ease;
+}
+@media screen and (min-width: 970px) {
+  .header .toggle__menu {
+    display: none;
+  }
+  .header__nav {
+    position: unset;
+    width: unset;
+    height: unset;
+    background: none;
+  }
+  .header__nav ul {
+    display: flex;
+  }
+  .header__nav ul li {
+    margin-left: 2rem;
+    border-bottom: none;
+  }
+  .header__nav ul li a {
+    color: #ffffff;
+  }
+  .header__nav ul li:hover {
+    background: none;
+  }
+  .header__nav ul li:hover a {
+    color: #ffa700;
+  }
+}
+
+/***********BANNER***********/
+.banner {
+  padding-bottom: 3rem;
+}
+.banner .container .banner__wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column-reverse;
+}
+.banner img {
+  width: 100%;
+  margin-bottom: 3rem;
+  margin-left: 0;
+  padding-top: 10rem;
+}
+.banner__text {
+  text-align: center;
+}
+.banner__text h1 {
+  font-size: 4rem;
+  margin: 0 auto;
+  color: #ffa700;
+  line-height: 0.8;
+}
+.banner__text p {
+  text-align: justify;
+  margin-bottom: 10rem;
+  margin: 3rem;
+}
+.banner__text a {
+  background: #ffa700;
+  padding: 2rem 3rem;
+  border-radius: 4rem;
+  color: #ffffff;
+}
+.banner__text a:hover {
+  background: #2b2b2b;
+}
+
+@media screen and (min-width: 970px) {
+  .banner .container .banner__wrapper {
+    flex-direction: row;
+  }
+  .banner img {
+    width: 70rem;
+    margin-bottom: 3rem;
+    margin-left: 0;
+    padding-top: 15rem;
+  }
+  .banner__text {
+    max-width: 50rem;
+    text-align: left;
+  }
+  .banner__text h1 {
+    font-size: 8rem;
+    color: #ffa700;
+    font-weight: 900;
+    margin-left: 1rem;
+    margin-bottom: 5rem;
+    max-width: 20rem;
+  }
+  .banner__text p {
+    text-align: justify;
+    width: auto;
+    margin-left: 1rem;
+    margin-bottom: 5rem;
+  }
+  .banner__text a {
+    margin-top: 3rem;
+  }
+  .banner__text a:hover {
+    background: #2b2b2b;
+  }
+}
+/*********SERVICES*********/
+.hm-services {
+  background: #2b2b2b;
+  padding: 5rem;
+}
+.hm-services__item {
+  text-align: center;
+  margin-bottom: 8rem;
+}
+.hm-services__item h4 {
+  font-size: 2rem;
+  color: #ffa700;
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+.hm-services__item p {
+  text-align: justify;
+  color: #ffffff;
+  font-size: 2rem;
+  margin-bottom: 5rem;
+}
+.hm-services__item a {
+  color: #ffa700;
+  font-size: 2rem;
+}
+.hm-services__item i {
+  color: #ffa700;
+  font-size: 5rem;
+}
+.hm-services__item a {
+  background: #ffa700;
+  padding: 2rem 3rem;
+  border-radius: 4rem;
+  color: #ffffff;
+}
+.hm-services__item a:hover {
+  background: #ffffff;
+  color: #2b2b2b;
+}
+
+@media screen and (min-width: 970px) {
+  .hm-services__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5rem;
+  }
 }/*# sourceMappingURL=main.css.map */

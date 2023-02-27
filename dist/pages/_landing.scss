@@ -1,0 +1,146 @@
+/***********BANNER***********/
+.banner{
+    padding-bottom: 3rem;
+    .container{
+        .banner__wrapper{
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column-reverse;
+        }
+
+    }
+    & img{
+        width: 100%;
+        margin-bottom: 3rem;
+        margin-left: 0;
+        padding-top: 10rem;
+    }
+    &__text{
+        text-align: center;
+
+        h1{
+            font-size: 4rem;
+            margin: 0 auto;
+            color: $clr-primary;
+            line-height: 0.8;
+        }
+        p{
+            text-align: justify;
+            margin-bottom: 10rem;
+            margin: 3rem;
+        }
+        a{
+            background: $clr-primary;
+            padding: 2rem 3rem;
+            border-radius: 4rem;
+            color: $clr-light;
+            &:hover{
+                background: $clr-dark;
+            }
+        }
+
+
+    }
+}
+
+
+    
+@include mediaQuery($break-lg){
+    .banner{
+        .container{
+            .banner__wrapper{
+                flex-direction: row;
+                }
+            }
+    & img{
+        width: 70rem;
+        margin-bottom: 3rem;
+        margin-left: 0;
+        padding-top: 15rem;
+    }
+    &__text{
+        max-width: 50rem;
+        text-align: left;
+            h1{
+                font-size: 8rem;
+                color: $clr-primary;
+                font-weight: 900;
+                margin-left: 1rem;
+                margin-bottom: 5rem;
+                max-width: 20rem;
+            }
+            p{
+                 text-align: justify;
+                 width: auto;
+                 margin-left: 1rem;
+                 margin-bottom: 5rem;
+            }
+            a{
+                margin-top: 3rem;
+                &:hover{
+                    background: $clr-dark;
+                }
+            }
+     
+        
+            }
+        }
+           
+    }
+
+
+
+/*********SERVICES*********/
+
+.hm-services{
+    background: $clr-dark;
+    padding: 5rem;
+
+    &__item {
+        text-align: center;
+        margin-bottom: 8rem;
+        h4{
+        font-size: 2rem;
+        color: $clr-primary;
+        font-weight: 600;
+        margin-bottom: 3rem;
+    }
+        p{
+        text-align: justify;
+        color: $clr-light;
+        font-size: 2rem;
+       
+        margin-bottom: 5rem;
+    }
+        a{
+        color: $clr-primary;
+        font-size: 2rem;
+
+    }
+        i{
+        color: $clr-primary;
+        font-size: 5rem;
+    }
+        a{
+            background: $clr-primary;
+            padding: 2rem 3rem;
+            border-radius: 4rem;
+            color: $clr-light;
+            &:hover{
+                background: $clr-light;
+                color: $clr-dark
+            }
+        }
+
+}
+}
+
+@include mediaQuery($break-lg){
+    .hm-services{
+        &__wrapper{
+            @include grid(3, 5rem);
+        }
+    }
+}
+
